@@ -9,7 +9,7 @@ const port = process.argv.slice(2)
 // Define a const `port` using the argument from the command line. 
 // Make this const default to port 3000 if there is no argument given for `--port`.
 if (port == undefined) {
-    port = 3000
+    port = '3000'
 }
 // Use the fs module to create an arrow function using `fs.readFile`.
 // Use the documentation for the Node.js `fs` module. 
@@ -37,6 +37,6 @@ fs.readFile(fileName, 'utf8', (err, data) => {
 // Start the `server` const listening on the port defined by argument in your `port` const. 
 // Put the exact message `Server listening on port ${port}` on the console log. 
 server.listen(port)
-console.log('Server listening on port ${port}')
+console.log('Server listening on port${port}')
 })
 // That's it! You're all done!
