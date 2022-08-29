@@ -3,7 +3,7 @@ const http = require('http')
 // Require fs module
 const fs = require('fs')
 // Require minimist module (make sure you install this one via npm).
-const argv = require('minimist')
+const minimist = require('minimist')
 // Use minimist to process one argument `--port=` on the command line after `node server.js`.
 const port = process.argv.slice(2)
 // Define a const `port` using the argument from the command line. 
@@ -37,6 +37,6 @@ fs.readFile(fileName, 'utf8', (err, data) => {
 // Start the `server` const listening on the port defined by argument in your `port` const. 
 // Put the exact message `Server listening on port ${port}` on the console log. 
 server.listen(port)
-console.log('Server listening at ${port}')
+console.log('Server listening on port ${port}')
 })
 // That's it! You're all done!
